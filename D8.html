@@ -1,0 +1,253 @@
+<html>
+
+<head>
+  <script defer>
+    /* EXERCISE 1
+      Write a function for changing the title of the document in something else.
+      */
+
+
+
+    const changeTitle = function (newTitle) {
+
+      document.querySelector('h1').innerText = newTitle
+
+    };
+
+
+
+    // changeTitle('Hey this is the new title');
+
+
+    /* EXERCISE 2
+    Write a function for changing the class of the title of the page in "myHeading".
+    */
+
+    const addClassToTitle = function () {
+
+      //
+      document.querySelector('h1').classList.add('myHeading')
+
+    };
+
+    // document.addEventListener('load', addClassToTitle)
+
+
+    // addClassToTitle()
+
+
+    /* EXERCISE 3
+    Write a function for changing the text of only the p which are children of a div.
+    */
+
+    const changePcontent = function () {
+      //
+      let pText = document.querySelector('div p').textContent = 'New Text';
+
+      // pText.style.backgroundColor = "red"
+
+    };
+
+    // changePcontent()
+
+    /* EXERCISE 4
+    Write a function for changing the destination of every link to https://www.google.com
+    */
+
+    const changeUrls = function () {
+      //
+      document.querySelector('a').setAttribute('href', 'https://www.google.com')
+    };
+
+    // changeUrls()
+    /* EXERCISE 5
+     Write a function for adding a new item in the second list.
+     */
+
+    const addToTheSecond = function (content) {
+
+      const newEl = document.createElement('li');
+      const newContent = document.createTextNode('Hey im the new Element')
+      newEl.style.backgroundColor = 'red'
+
+      newEl.appendChild(newContent)
+
+      const ul = document.querySelector('#secondList');
+
+      ul.appendChild(newEl)
+
+
+
+      // console.log(newEl);
+
+      // newEl.insertAdjacentHTML('afterbegin', ul)
+
+      // newEl.append(ul)
+
+      // var tag = document.createElement("li");
+      // var text = document.createTextNode("Tutorix is the best e-learning platform");
+      // tag.appendChild(text);
+      // var element = document.getElementById("new");
+      // element.appendChild(tag);
+
+
+    };
+
+    // addToTheSecond()
+
+    /* EXERCISE 6
+    Write a function for adding a second paragraph to the div.
+    */
+
+    const addParagraph = function (content) {
+
+      const p = document.createElement('p');
+      const newContent = document.createTextNode('Hey im the new paragraph')
+      p.style.backgroundColor = 'green'
+
+      p.appendChild(newContent)
+
+      const div = document.querySelector('div:nth-of-type(2)');
+
+      div.appendChild(p)
+
+
+    };
+
+    // addParagraph()
+
+    /* EXERCISE 7
+    Write a function for making the first UL disappear.
+    */
+
+    const firstUlDisappear = function () {
+      document.querySelector('a').style.display = 'none'
+    };
+
+
+    // firstUlDisappear()
+    /* EXERCISE 8
+    Write a function for making the background of every UL green.
+    */
+
+    const paintItGreen = function () {
+      document.querySelector('a').style.backgroundColor = 'green';
+
+    };
+
+    // paintItGreen()
+
+    /* EXERCISE 9
+    Make the heading of the page change color every time the user clicks on it.
+    */
+
+    const makeItClickable = function () {
+      //
+
+      document.addEventListener('click', function () {
+        document.querySelector('h1').style.backgroundColor = 'red'
+
+      })
+    };
+
+    makeItClickable()
+
+
+    /* EXERCISE 10
+    Change the footer text with something else when the user clicks on it.
+    */
+
+    const changeFooterText = function () {
+      //
+
+      document.addEventListener('click', () => {
+
+        document.querySelector(' footer p').textContent = 'Hey im the new text '
+
+      })
+    };
+
+
+    changeFooterText()
+
+
+    /* EXERCISE 11
+    Attach an event listener to the input field in the page for console logging its value just after any keystroke.
+    */
+
+    // const inputField = document.getElementById("input-field").addEventListener('keypress', press)
+    // // ...
+
+
+    // const press = function (e) {
+    //   console.log(e);
+    // }
+
+
+    // press()
+
+
+    /* EXERCISE 12
+    Create a new welcome alert message when the page successfully loads.
+    */
+
+    window.onload = function () {
+      //
+      alert(' page successfully loads')
+
+    };
+
+    /* EXERCISE 13
+    Use HTML5 tags to divide the content of the page in a more semantic way.
+    */
+  </script>
+
+  <style>
+    .myHeading {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>This is the title of the page</h1>
+    <h2>This is the subtitle of the page</h2>
+  </header>
+
+  <main>
+    <hr />
+
+    <ul id="firstList">
+      <li>1st</li>
+      <li>2nd</li>
+      <li>3rd</li>
+    </ul>
+
+    <ul id="secondList">
+      <li>1st</li>
+      <li>2nd</li>
+      <li>3rd</li>
+    </ul>
+
+    <a href="strive.school">This link goes to Strive School</a>
+
+    <div>
+      <p>This text is just for the exercise</p>
+    </div>
+
+
+
+    <div>
+      <input type="text" id="input-field" placeholder="input field for the exercise" />
+    </div>
+
+
+  </main>
+
+  <footer>
+    <p>And this text is just for the exercise too!</p>
+  </footer>
+</body>
+
+</html>
